@@ -1,0 +1,42 @@
+.login-container {
+  display: flex;
+  background-image: url("https://brunn.qodeinteractive.com/elementor/wp-content/uploads/2018/10/home-3-background-img-4.jpg");
+  background-repeat: repeat;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+.login {
+  border-radius: 12px;
+  padding: 10px;
+  width: 330px;
+  height: 370px;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  margin-left: 55em;
+}
+.login h3,p {
+  margin: 1.4rem;
+}
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+}
+
+.text-feild {
+  display: flex;
+  flex-direction: column;
+  width: 16rem;
+  margin-left: 1rem;
+}
+.checkbox-forget {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.check-box,
+p {
+  font-size: x-small;
+}
