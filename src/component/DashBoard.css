@@ -1,0 +1,35 @@
+
+.item1 {
+  grid-area: header;
+  height: 2rem;
+  
+}
+.item2 {
+  grid-area: menu;
+  height:24.9rem ;
+  width: 20vw;
+
+}
+.item3 {
+  grid-area: main;
+  margin: 8px;
+  width:78vw ;
+
+}
+
+.grid-container {
+  display: grid;
+  height:100%;
+  width: 100%;
+  grid-template-areas:
+    "header header header header header header"
+    "menu main main main main main"
+    "menu main main main main main";
+    background-color: rgb(170, 151, 209);
+}
+
+.grid-container > div {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}

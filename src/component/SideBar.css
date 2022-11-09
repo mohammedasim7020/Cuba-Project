@@ -1,0 +1,22 @@
+.according{
+    height: 40vh;
+}
+.master{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+li{
+    list-style-type: none;
+    font-size:x-small;
+    margin: 0;
+    
+}
+.flex-item{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.icons{
+    margin-right: 10px;
+}
