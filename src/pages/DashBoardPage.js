@@ -1,9 +1,9 @@
 import React from 'react'
 import DashBorad from '../component/DashBoard'
-const DashBoardPage = () => {
+const DashBoardPage = ({children}) => {
   return (
     <div>
-      <DashBorad/>
+      <DashBorad children={children} />
     </div>
   )
 }

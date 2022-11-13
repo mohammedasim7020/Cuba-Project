@@ -1,22 +1,28 @@
-.according{
-    height: 40vh;
+.according {
+  height: 40vh;
 }
-.master{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.master {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-li{
-    list-style-type: none;
-    font-size:x-small;
-    margin: 0;
-    
+.navlink {
+  list-style-type: none;
+  text-decoration-line: none;
+  font-size: x-small;
+  color: black;
 }
-.flex-item{
-    display: flex;
-    align-items: center;
-    text-align: left;
+.flex-item {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
 }
-.icons{
-    margin-right: 10px;
+.icons {
+  margin-right: 10px;
+}
+.nestes-items {
+  display: flex;
+  justify-content: left;
+  margin-left: 2rem;
+  font-size: "12px";
 }

@@ -1,11 +1,11 @@
-import LoginPage from './pages/LoginPage'
-import DashBoardPage from "./pages/DashBoardPage"
+import RoutingPages from "./routes/RoutingPages";
+import TogelDrawer from "./component/nestedcomponent/TogelDrawer";
 function App() {
 
   return (
     <div className="App">
-      {/* <LoginPage/> */}
-      <DashBoardPage/>
+      <RoutingPages/>
+      {/* <TogelDrawer/> */}
     </div>
   );
 }
