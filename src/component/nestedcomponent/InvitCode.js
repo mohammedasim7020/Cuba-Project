@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Divider, Typography } from "@mui/material";
+import { Pagination, Typography } from "@mui/material";
 
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -15,9 +15,16 @@ import styled from "styled-components";
 import "./InvitCode.css";
 
 const rows = ["HAR001", "FAIZ005 "];
+
 const InvitCode = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isEdit,setIsEdit] = useState(false)
+  const [isEdit, setIsEdit] = useState(false);
+  const [page, setPage] = useState(1);
+
+  const handlePageChange = (event, newPage) => {
+    setPage(newPage);
+  };
+
   const StyleTableCell = styled.th`
     font-weight: bold;
     font-size: x-small;
@@ -28,10 +35,10 @@ const InvitCode = () => {
     fontSize: "x-small",
     fontWeight: "bold",
   };
-  const handleDrawerOpen = ()=>{
-    setIsDrawerOpen(true)
-    setIsEdit(true)
-  }
+  const handleDrawerOpen = () => {
+    setIsDrawerOpen(true);
+    setIsEdit(true);
+  };
   return (
     <div className="invite-codes__container">
       <div className="invite-codes">
@@ -42,10 +49,10 @@ const InvitCode = () => {
           setIsDrawerOpen={setIsDrawerOpen}
           isDrawerOpen={isDrawerOpen}
           isEdit={isEdit}
-
+          setIsEdit={setIsEdit}
         />
       </div>{" "}
-      <Divider />
+      <hr />
       <br />
       <TableContainer component={Paper}>
         <Table
@@ -65,7 +72,7 @@ const InvitCode = () => {
           </TableHead>
           <TableBody>
             {rows.map((row, index) => (
-              <TableRow key={row.name}>
+              <TableRow key={index}>
                 <TableCell sx={style} align="center">
                   {index + 1}
                 </TableCell>
@@ -79,16 +86,25 @@ const InvitCode = () => {
                   text
                 </TableCell>
                 <TableCell align="center">
-                  <Button className='buttons'>Active</Button>
+                  <Button className="buttons">Active</Button>
                 </TableCell>
                 <TableCell align="center">
-                  <Button className='button' onClick={handleDrawerOpen}>@Edit</Button>
+                  <Button className="button" onClick={handleDrawerOpen}>
+                    @Edit
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
+      <div className="pagination">
+        <Pagination
+          count={rows.length}
+          onChange={handlePageChange}
+          page={page}
+        ></Pagination>
+      </div>
     </div>
   );
 };

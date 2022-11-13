@@ -43,7 +43,7 @@ const SideBar = () => {
         </div>
         <Accordion
           disableGutters
-          elevation={-1}
+          elevation={-2}
           sx={{
             "&:before": {
               display: "none",

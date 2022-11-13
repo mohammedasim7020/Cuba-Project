@@ -1,4 +1,26 @@
-.styled{
-    background-color: aqua;
-    color: black;
+.waiting-list__container {
+  padding: 0px 0px 0px 8px;
+}
+.waiting-list {
+  display: flex;
+}
+.search {
+  width: 98%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.right-side {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.select-tag {
+  border-radius: 5px;
+  width: 2.5rem;
+  background-color: ghostwhite;
+}
+.tabel {
+  padding-top: 25px;
 }

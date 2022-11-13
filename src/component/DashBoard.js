@@ -5,16 +5,19 @@ import SideBar from "./SideBar";
 import "./DashBoard.css";
 const DashBorad = ({ children }) => {
   return (
-    <div class="grid-container">
-      <div class="item1">
+    <>
+      <div className="grid-container">
+      <div className="item1">
         <NavigationBar />
       </div>
-      <div class="item2">
+      <div className="item2">
         <SideBar/>
       </div>
-      <div class="item3">{children}</div>
+      <div className="item3">{children}</div>
     </div>
+    </>
   );
+  
 };
 
 export default DashBorad;
