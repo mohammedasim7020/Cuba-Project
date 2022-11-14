@@ -19,7 +19,7 @@ const SideBar = () => {
     fontWeight: "bold",
   };
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const displayData = data.map((item, index) => {
     return (
@@ -37,7 +37,7 @@ const SideBar = () => {
   return (
     <>
       <div className="according">
-        <div className="flex-item" onClick={()=>navigate('/home')}>
+        <div className="flex-item" onClick={() => navigate("/home")}>
           <OtherHousesOutlinedIcon className="icons" />
           <Typography style={style}>DashBoard</Typography>
         </div>

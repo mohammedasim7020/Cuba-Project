@@ -1,10 +1,15 @@
 import * as React from "react";
-import Backdrop from "@mui/material/Backdrop";
+// import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-
+import CancelRoundedIcon from "@mui/icons-material/CancelRounded";
+import ContactMailRoundedIcon from "@mui/icons-material/ContactMailRounded";
 import Typography from "@mui/material/Typography";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
+import NewspaperIcon from "@mui/icons-material/Newspaper";
+import HistoryIcon from "@mui/icons-material/History";
+import PaymentIcon from "@mui/icons-material/Payment";
 import "./Modal.css";
 const style = {
   position: "absolute",
@@ -15,8 +20,7 @@ const style = {
   width: 780,
   height: "470px",
   bgcolor: "white",
-
-  // boxShadow:1,
+  boxShadow: 5,
 };
 
 export default function TransFormModal({ open, setOpen }) {
@@ -28,7 +32,6 @@ export default function TransFormModal({ open, setOpen }) {
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={open}
-        onClose={handleClose}
         closeAfterTransition
         // BackdropComponent={Backdrop}
         BackdropProps={{
@@ -39,21 +42,56 @@ export default function TransFormModal({ open, setOpen }) {
           <Box sx={style}>
             <div>
               <nav className="nav-bar">
-                <p>User’s Profile</p>
-                <h3>logo</h3>
+                <Typography sx={{ fontWeight: "bold" }}>
+                  User’s Profile
+                </Typography>
+
+                <CancelRoundedIcon
+                  sx={{ color: "red", size: "medium" }}
+                  onClick={handleClose}
+                />
               </nav>
-              <hr/>
+              <hr />
               <div className="manu-bar">
                 <manu className="side-manu">
-                  <p>Profile</p>
-                  <p>Earnings</p>
-                  <p>Task History</p>
+                  <div className="flex-items">
+                    <AccountBoxIcon className="icons" />
+                    <Typography
+                      sx={{ fontSize: "x-small", fontWeight: "bold" }}
+                    >
+                      Typographyrofile
+                    </Typography>
+                  </div>
+
+                  <div className="flex-items">
+                    <NewspaperIcon className="icons" />
+                    <Typography
+                      sx={{ fontSize: "x-small", fontWeight: "bold" }}
+                    >
+                      Earnings
+                    </Typography>
+                  </div>
+                  <div className="flex-items">
+                    <HistoryIcon className="icons" />
+                    <Typography
+                      sx={{ fontSize: "x-small", fontWeight: "bold" }}
+                    >
+                      Task History
+                    </Typography>
+                  </div>
+
+                  <div className="flex-items">
+                    <PaymentIcon className="icons" />
+                    <Typography
+                      sx={{ fontSize: "x-small", fontWeight: "bold" }}
+                    >
+                      Payment History
+                    </Typography>
+                  </div>
                 </manu>
-              <div className="main-box">
-                <main className="main-page">
-                 
-                </main>
-              </div>
+                <div className="main-box">
+                  <main className="main-page"></main>
+                </div>
               </div>
             </div>
           </Box>
